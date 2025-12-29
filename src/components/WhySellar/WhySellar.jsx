@@ -15,7 +15,7 @@ const WhySellar = () => {
             <div className="why-sellar-container">
                 <div className="header-content">
                     <span className="premium-tag">THE COMPARISON</span>
-                    <h2 className="section-h2">Why Choose <span className="blue-brand">Sellar?</span></h2>
+                    <h2 className="section-h2">Why Choose Sellar<span className="blue-brand">Sellar?</span></h2>
                     <p className="section-p">Stop settling for outdated systems. Switch to the future of retail.</p>
                 </div>
 
