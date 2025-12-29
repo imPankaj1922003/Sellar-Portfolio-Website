@@ -1,0 +1,197 @@
+.catalogue-section {
+    padding: 60px 20px;
+    background: #f8fbff;
+    /* Very Light Blue Shade */
+    overflow: hidden;
+}
+
+.cat-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* --- TEXT CONTENT --- */
+.cat-label {
+    color: #007EA7;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.cat-heading {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: #00171f;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.text-blue {
+    color: #007EA7;
+}
+
+/* --- 2 PER LINE GRID --- */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Hamesha 2 cards ek line mein */
+    gap: 15px;
+}
+
+.solution-mini-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+.solution-mini-card:hover {
+    border-color: #007EA7;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 126, 167, 0.05);
+}
+
+.sol-icon-box {
+    font-size: 1.4rem;
+    background: #f1f5f9;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sol-content h4 {
+    font-size: 0.9rem;
+    color: #0f172a;
+    margin: 0;
+    font-weight: 700;
+}
+
+.sol-content p {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.start-btn {
+    background: #00171f;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 35px;
+    transition: 0.3s;
+}
+
+/* --- LAPTOP DESIGN --- */
+.cat-visual-side {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.laptop-mock {
+    width: 100%;
+    max-width: 480px;
+    z-index: 2;
+}
+
+.laptop-top {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+}
+
+.laptop-display {
+    background: #000;
+    aspect-ratio: 16 / 10;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.laptop-display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.laptop-base-part {
+    height: 10px;
+    background: #cbd5e1;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+.trackpad-area {
+    width: 50px;
+    height: 3px;
+    background: #64748b;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 4px 4px;
+}
+
+.glow-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 126, 167, 0.08) 0%, transparent 70%);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    .cat-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cat-visual-side {
+        display: none;
+    }
+
+    /* Laptop hide on mobile */
+
+    .solutions-grid {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .solution-mini-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Tab bhi 2 per line rahega */
+        gap: 10px;
+    }
+
+    .sol-content h4 {
+        font-size: 0.8rem;
+    }
+
+    .sol-content p {
+        display: none;
+    }
+
+    /* Mobile par desc hide taaki clean lage */
+}

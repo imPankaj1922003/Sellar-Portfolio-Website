@@ -1,0 +1,310 @@
+/* --- SECTION & CONTAINER --- */
+.pricing-section {
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+.pricing-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-header-main {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #00171f;
+    margin-bottom: 20px;
+}
+
+.blue-text {
+    color: #007EA7;
+}
+
+/* --- TOGGLE & TABS --- */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.active-period {
+    color: #007EA7;
+}
+
+.save-badge {
+    font-size: 10px;
+    background: #22c55e;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.service-tabs {
+    display: inline-flex;
+    background: #e2e8f0;
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+    background: transparent;
+    color: #64748b;
+}
+
+.tab-btn.active {
+    background: #ffffff;
+    color: #007EA7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- TABLE CORE LAYOUT --- */
+.pricing-table-scroll-area {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-table-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-header-sticky,
+.t-row {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1fr;
+    width: 100%;
+}
+
+.table-header-sticky {
+    /* padding: 5px; */
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.feature-label-cell {
+    padding: 40px 25px 15px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #94a3b8;
+    align-self: end;
+    letter-spacing: 1px;
+}
+
+.plan-column-head {
+    padding: 30px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #f1f5f9;
+    position: relative;
+}
+
+.plan-column-head.highlighted {
+    background: rgba(0, 126, 167, 0.03);
+    border-top: 5px solid #007EA7;
+}
+
+.badge-rec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #007EA7;
+    color: white;
+    font-size: 9px;
+    padding: 5px;
+    font-weight: 800;
+}
+
+.p-title {
+    font-weight: 800;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.p-price {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #00171f;
+    margin: 8px 0;
+}
+
+.p-cycle {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* --- ROWS & CELLS --- */
+.t-row {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.t-row:hover {
+    background: #f8fafc;
+}
+
+.t-cell-name {
+    padding: 18px 25px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.t-cell-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #f1f5f9;
+}
+
+.bg-tint {
+    background: rgba(0, 126, 167, 0.01);
+}
+
+.tick {
+    color: #22c55e;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.cross {
+    color: #ef4444;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* --- SWITCH UI --- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3.5px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #007EA7;
+}
+
+input:checked+.slider:before {
+    transform: translateX(21px);
+}
+
+.pricing-note {
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 25px;
+}
+
+/* --- MOBILE VIEW: VERTICAL SCROLL (Y-AXIS) --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .pricing-section {
+        padding: 40px 10px;
+    }
+
+    /* X-axis scroll band, Y-axis scroll chalu */
+    .pricing-table-scroll-area {
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 550px;
+        /* Is height ke baad table ke andar scroll hoga */
+        border-radius: 15px;
+    }
+
+    /* Table columns mobile ke liye narrow kiye */
+    .table-header-sticky,
+    .t-row {
+        grid-template-columns: 1.6fr 0.7fr 0.7fr;
+    }
+
+    .t-cell-name {
+        padding: 12px 10px;
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .feature-label-cell {
+        padding: 35px 10px 10px;
+        font-size: 9px;
+    }
+
+    .plan-column-head {
+        padding: 20px;
+    }
+
+    .p-price {
+        font-size: 1.2rem;
+    }
+
+    .p-title {
+        margin-top: 8px;
+        font-size: 0.8rem;
+    }
+
+    /* Custom Vertical Scrollbar */
+    .pricing-table-scroll-area::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .pricing-table-scroll-area::-webkit-scrollbar-thumb {
+        background: #007EA7;
+        border-radius: 10px;
+    }
+}

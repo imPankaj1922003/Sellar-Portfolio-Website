@@ -1,0 +1,138 @@
+/* --- DARK THEME SECTION --- */
+.solutions-section.dark-theme {
+    padding: 80px 20px;
+    background-color: #0f172a;
+    /* Deep Dark Navy */
+    background-image: radial-gradient(circle at 0% 0%, rgba(0, 126, 167, 0.15) 0%, transparent 50%);
+    position: relative;
+}
+
+.solutions-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.solutions-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mini-title {
+    color: #00A8E8;
+    /* Brighter blue for dark bg */
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: #ffffff;
+    /* White text for contrast */
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.blue-text {
+    color: #00A8E8;
+}
+
+.section-p {
+    color: #94a3b8;
+    /* Subtle grey-blue text */
+    font-size: 1rem;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- THE 2-COLUMN GRID --- */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.sol-card {
+    background: rgba(30, 41, 59, 0.7);
+    /* Dark Glass Card */
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle border */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sol-card:hover {
+    transform: translateY(-8px);
+    background: rgba(30, 41, 59, 1);
+    border-color: #00A8E8;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sol-icon-circle {
+    min-width: 55px;
+    height: 55px;
+    background: rgba(0, 168, 232, 0.1);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px rgba(0, 168, 232, 0.1);
+}
+
+.sol-text h3 {
+    font-size: 1.15rem;
+    color: #f8fafc;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.sol-text p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .solutions-section.dark-theme {
+        padding: 50px 15px;
+    }
+
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Mobile pe bhi 2 cards */
+        gap: 12px;
+    }
+
+    .sol-card {
+        padding: 20px 10px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .sol-text p {
+        display: none;
+        /* Mobile par description hide, space bachane ke liye */
+    }
+
+    .sol-text h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-h2 {
+        font-size: 1.8rem;
+    }
+}

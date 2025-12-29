@@ -1,0 +1,213 @@
+/* --- NAVBAR & MOBILE MENU (COPY-PASTE READY) --- */
+
+/* Navbar Base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 8%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 126, 167, 0.08);
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -1.5px;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links span {
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 15px;
+  color: var(--navy);
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: var(--primary);
+}
+
+.contact-btn-custom {
+  background: var(--navy);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 23, 31, 0.15);
+}
+
+/* --- HAMBURGER --- */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2005;
+  cursor: pointer;
+}
+
+.mobile-toggle div {
+  width: 28px;
+  height: 3px;
+  background: var(--navy);
+  border-radius: 10px;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- PREMIUM FLOATING SIDEBAR (FIXED UI) --- */
+.mobile-sidebar {
+  position: fixed;
+  top: 10px;
+  /* Floating gap from top */
+  right: -110%;
+  /* Hidden */
+  width: 85%;
+  max-width: 320px;
+  height: calc(100vh - 20px);
+  /* Floating gap from bottom */
+  background: #ffffff;
+  z-index: 2000;
+  border-radius: 24px;
+  /* Fully rounded card */
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -15px 15px 40px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.mobile-sidebar.open {
+  right: 10px;
+  /* Floating gap from right side */
+}
+
+.sidebar-header {
+  padding: 35px 25px 15px;
+  border-bottom: none;
+}
+
+.sidebar-header h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--navy);
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.sidebar-links {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+}
+
+.sidebar-links span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 16px 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+/* Active/Tap Effect */
+.sidebar-links span:active {
+  background: #f1f5f9;
+  color: var(--primary);
+  transform: scale(0.97);
+}
+
+.link-icon {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.sidebar-footer {
+  padding: 25px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.sidebar-footer p {
+  font-size: 0.85rem;
+  color: var(--slate);
+  margin-bottom: 15px;
+}
+
+.sidebar-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 126, 167, 0.15);
+}
+
+/* --- OVERLAY --- */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 23, 31, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 1999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- RESPONSIVE LOGIC --- */
+@media (max-width: 992px) {
+
+  .nav-links,
+  .contact-btn-custom {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .mobile-toggle.active div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background: var(--primary);
+  }
+
+  .mobile-toggle.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background: var(--primary);
+  }
+}
