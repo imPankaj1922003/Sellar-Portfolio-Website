@@ -1,197 +1,335 @@
-.catalogue-section {
-    padding: 60px 20px;
-    background: #f8fbff;
-    /* Very Light Blue Shade */
+/* --- CATALOGUE PREMIUM SECTION --- */
+.cat-premium-section {
+    padding: clamp(60px, 10vw, 100px) 20px;
+    background-color: #ffffff;
+    background-image: linear-gradient(135deg, #ffffff 0%, #f1f8ff 100%);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
 }
 
-.cat-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+.cat-premium-wrapper {
+    max-width: 1300px;
+    width: 100%;
+}
+
+/* --- MOBILE HEADER (Hidden on Desktop) --- */
+.cat-mobile-header {
+    display: none;
+}
+
+.cat-premium-container {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 50px;
+    /* Desktop: Content Left, Phone Right */
+    gap: clamp(40px, 6vw, 100px);
     align-items: center;
 }
 
-/* --- TEXT CONTENT --- */
-.cat-label {
+/* --- DESKTOP CONTENT --- */
+.cat-premium-badge {
+    background: rgba(0, 126, 167, 0.1);
+    padding: 6px 16px;
+    border-radius: 50px;
     color: #007EA7;
     font-weight: 800;
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: inline-block;
 }
 
-.cat-heading {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+.cat-premium-h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     color: #00171f;
     font-weight: 900;
-    line-height: 1.2;
-    margin-bottom: 30px;
+    line-height: 1.1;
+    margin-bottom: 35px;
 }
 
-.text-blue {
+.text-glow-blue {
     color: #007EA7;
+    text-shadow: 0 0 20px rgba(0, 126, 167, 0.2);
 }
 
-/* --- 2 PER LINE GRID --- */
-.solutions-grid {
+.cat-interactive-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* Hamesha 2 cards ek line mein */
-    gap: 15px;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-.solution-mini-card {
+/* --- DESKTOP BUTTONS --- */
+.cat-feature-btn {
     background: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
     border: 1px solid #e2e8f0;
+    padding: 24px;
+    border-radius: 24px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    transition: 0.3s ease;
+    gap: 18px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;
+    width: 100%;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.solution-mini-card:hover {
+.cat-feature-btn.active {
     border-color: #007EA7;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 126, 167, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 126, 167, 0.1);
+    transform: translateX(20px);
 }
 
-.sol-icon-box {
-    font-size: 1.4rem;
-    background: #f1f5f9;
-    width: 45px;
-    height: 45px;
+.cat-btn-icon {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    background: #f8fafc;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-}
-
-.sol-content h4 {
-    font-size: 0.9rem;
-    color: #0f172a;
-    margin: 0;
-    font-weight: 700;
-}
-
-.sol-content p {
-    font-size: 0.75rem;
-    color: #64748b;
-    margin-top: 2px;
-}
-
-.start-btn {
-    background: #00171f;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 10px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    margin-top: 35px;
+    flex-shrink: 0;
     transition: 0.3s;
 }
 
-/* --- LAPTOP DESIGN --- */
-.cat-visual-side {
-    position: relative;
+.cat-feature-btn.active .cat-btn-icon {
+    background: #007EA7;
+    color: #fff;
+}
+
+.cat-btn-txt h4 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.cat-btn-txt p {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* --- PHONE MOCKUP (Desktop) --- */
+.cat-premium-visual {
     display: flex;
     justify-content: center;
+    perspective: 1200px;
+    position: relative;
 }
 
-.laptop-mock {
-    width: 100%;
-    max-width: 480px;
-    z-index: 2;
-}
-
-.laptop-top {
-    background: #1e293b;
-    padding: 10px;
-    border-radius: 12px 12px 0 0;
-}
-
-.laptop-display {
+.cat-phone-mockup {
+    width: 290px;
+    height: 580px;
     background: #000;
-    aspect-ratio: 16 / 10;
-    border-radius: 4px;
+    border: 12px solid #1e293b;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    transform: rotateY(-10deg) rotateX(2deg);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.15);
+}
+
+.cat-phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #fdfdfd;
+    border-radius: 38px;
     overflow: hidden;
 }
 
-.laptop-display img {
-    width: 100%;
+/* --- INTERNAL APP UI --- */
+.cat-app-mini-ui {
     height: 100%;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
 }
 
-.laptop-base-part {
-    height: 10px;
+.cat-app-nav {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.cat-app-nav .app-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: #00171f;
+}
+
+.cat-app-nav .dot {
+    width: 8px;
+    height: 8px;
     background: #cbd5e1;
-    border-radius: 0 0 15px 15px;
-    position: relative;
+    border-radius: 50%;
 }
 
-.trackpad-area {
-    width: 50px;
-    height: 3px;
-    background: #64748b;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0 0 4px 4px;
+.cat-app-body {
+    padding: 25px;
+    animation: slideUp 0.4s ease-out;
 }
 
-.glow-effect {
-    position: absolute;
-    width: 100%;
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cat-status-card {
+    padding: 20px;
+    border-radius: 24px;
+    color: #fff;
+}
+
+.cat-status-card h3 {
+    font-size: 26px;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.cat-mini-progress {
+    height: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cat-mini-progress .bar {
+    width: 75%;
     height: 100%;
-    background: radial-gradient(circle, rgba(0, 126, 167, 0.08) 0%, transparent 70%);
+    background: #fff;
 }
 
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 992px) {
-    .cat-wrapper {
-        grid-template-columns: 1fr;
+.cat-app-footer {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+
+/* --- MOBILE VIEW (AppShowCase Style) --- */
+@media (max-width: 768px) {
+    .cat-mobile-header {
+        display: block;
         text-align: center;
+        margin-bottom: 30px;
     }
 
-    .cat-visual-side {
+    .cat-mobile-header h2 {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: #0f172a;
+        margin-top: 10px;
+    }
+
+    .cat-desktop-header {
         display: none;
     }
 
-    /* Laptop hide on mobile */
-
-    .solutions-grid {
-        max-width: 500px;
-        margin: 0 auto;
+    .cat-premium-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
     }
 
-    .solution-mini-card {
+    .cat-premium-content {
+        width: 32%;
+        z-index: 5;
+    }
+
+    .cat-interactive-grid {
+        display: flex;
         flex-direction: column;
+        gap: 15px;
+        margin: 0;
+    }
+
+    .cat-feature-btn {
+        padding: 0;
+        border: none;
+        background: transparent !important;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .cat-btn-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid #e2e8f0;
+        background: #fff;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .cat-feature-btn.active .cat-btn-icon {
+        border-color: #007EA7;
+        background: #f0f9ff;
+        transform: scale(1.1);
+        color: inherit;
+    }
+
+    .cat-btn-txt h4 {
+        font-size: 10px;
         text-align: center;
-        padding: 20px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .solutions-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* Tab bhi 2 per line rahega */
-        gap: 10px;
+        font-weight: 800;
     }
 
-    .sol-content h4 {
-        font-size: 0.8rem;
-    }
-
-    .sol-content p {
+    .cat-btn-txt p {
         display: none;
     }
 
-    /* Mobile par desc hide taaki clean lage */
+    .cat-premium-visual {
+        width: 65%;
+        perspective: none;
+    }
+
+    .cat-phone-mockup {
+        width: 215px;
+        height: 430px;
+        border-width: 7px;
+        border-radius: 32px;
+        transform: none;
+        margin: 0;
+    }
+
+    .cat-phone-screen {
+        border-radius: 25px;
+    }
+
+    .cat-app-body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cat-phone-mockup {
+        width: 190px;
+        height: 380px;
+    }
+
+    .cat-btn-icon {
+        width: 48px;
+        height: 48px;
+    }
 }

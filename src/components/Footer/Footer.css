@@ -1,17 +1,26 @@
 /* --- MEGA FOOTER --- */
 .mega-footer {
     background: #00171f;
-    padding: clamp(40px, 6vw, 60px) 0 30px;
+    /* Responsive padding: Top/Bottom balanced */
+    padding: clamp(60px, 8vw, 80px) 20px 30px; 
     color: #94a3b8;
     position: relative;
     overflow: hidden;
 }
 
+/* Wrapper to keep everything centered in the screen */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main Grid Layout */
 .footer-grid-layout {
     display: flex;
     justify-content: space-between;
-    gap: clamp(40px, 8vw, 100px);
-    padding-bottom: 40px;
+    align-items: flex-start;
+    gap: 60px;
+    padding-bottom: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -22,21 +31,21 @@
 
 .logo.white {
     color: #ffffff;
-    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: block;
     letter-spacing: -1px;
 }
 
 .footer-brand p {
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #94a3b8;
 }
 
-/* Social Links */
+/* Social Links Spacing */
 .social-links {
     display: flex;
     gap: 15px;
@@ -44,13 +53,14 @@
 
 .social-links a {
     transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 .social-links a:hover {
     transform: translateY(-5px);
 }
 
-/* Tabular Links Wrapper */
+/* Links Columns */
 .footer-links-wrapper {
     flex: 2;
     display: grid;
@@ -62,44 +72,46 @@
     color: #ffffff;
     font-size: 0.9rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     position: relative;
 }
 
 .footer-col h4::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -10px;
     left: 0;
-    width: 25px;
+    width: 30px;
     height: 2px;
     background: #007EA7;
-    /* Fixed variable to solid for safety */
 }
 
 .footer-col ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-col ul li {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-size: 0.95rem;
     transition: 0.3s ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .footer-col ul li:hover {
     color: #ffffff;
-    transform: translateX(8px);
+    padding-left: 5px; /* Subtle movement instead of large translate */
 }
 
-/* --- NEW CENTER LINE STYLE --- */
+/* --- CENTER LINE STYLE --- */
 .footer-made-in-india {
     text-align: center;
-    padding: 25px 0 10px;
+    padding: 35px 0 15px;
     font-size: 0.95rem;
     color: #cbd5e1;
     font-weight: 500;
@@ -110,20 +122,13 @@
     color: #ef4444;
     display: inline-block;
     animation: pulse 1.5s infinite;
+    margin: 0 4px;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 /* --- FOOTER BOTTOM --- */
@@ -131,9 +136,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    color: #64748b;
 }
 
 .footer-bottom-links {
@@ -147,37 +153,65 @@
 }
 
 .footer-bottom-links span:hover {
-    color: white;
+    color: #ffffff;
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE FIXES --- */
+
+@media (max-width: 1024px) {
+    .footer-grid-layout {
+        gap: 40px;
+    }
+}
+
 @media (max-width: 992px) {
     .footer-grid-layout {
         flex-direction: column;
-        text-align: center;
+        text-align: left; /* Better readability than center on mobile */
     }
 
     .footer-brand {
         max-width: 100%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+        margin-bottom: 20px;
     }
 
-    .social-links {
-        justify-content: center;
+    .footer-links-wrapper {
+        width: 100%;
+    }
+    
+    .footer-col h4::after {
+        left: 0; /* Keep it left aligned */
     }
 }
 
 @media (max-width: 768px) {
     .footer-links-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        gap: 30px;
     }
 }
 
 @media (max-width: 480px) {
+    .mega-footer {
+        padding: 50px 20px 20px;
+    }
+
+    /* .footer-links-wrapper {
+        /* grid-template-columns: 1fr; 1 column on small phones */
+        /* gap: 35px; */
+    /*  */
+
     .footer-bottom {
         flex-direction: column-reverse;
-        gap: 15px;
+        align-items: flex-start;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .footer-bottom-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 }
