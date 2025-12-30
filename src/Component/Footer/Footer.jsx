@@ -2,6 +2,8 @@ import React from 'react'
 import "./Footer.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import footerLogo from '../../assets/sellar-logo-heading.png';
+
 
 const Footer = () => {
     const scrollToSection = (id) => {
@@ -18,19 +20,23 @@ const Footer = () => {
                     <div className="footer-grid-layout">
                         {/* Brand Column */}
                         <div className="footer-brand">
-                            <div className="logo white">sellar<span className='text-blue-500'>.in</span></div>
+                            <img
+                                src={footerLogo}
+                                alt="Sellar Logo"
+                                style={{ height: '40px', width: 'auto', marginBottom: '15px' }}
+                            />
                             <p>The modern operating system for retail businesses. Empowering shops with digital tools to grow faster.</p>
                             <div className="social-links">
                                 <a href="https://facebook.com/yourpage" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faFacebook} size="2x" style={{ color: '#1877F2' }} />
                                 </a>
-                                <a href="https://twitter.com/yourhandle" target="_blank" rel="noreferrer"> 
+                                <a href="https://twitter.com/yourhandle" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#1877F2' }} />
                                 </a>
-                                <a href="https://www.instagram.com/sellar.in?igsh=MXhobzJrMzIzbGdlaQ==" target="_blank" rel="noreferrer"> 
+                                <a href="https://www.instagram.com/sellar.in?igsh=MXhobzJrMzIzbGdlaQ==" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faInstagram} size="2x" style={{ color: '#1877F2' }} />
                                 </a>
-                                <a href="https://www.linkedin.com/company/sellar-in/e" target="_blank" rel="noreferrer"> 
+                                <a href="https://www.linkedin.com/company/sellar-in/e" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faLinkedin} size="2x" style={{ color: '#1877F2' }} />
                                 </a>
                             </div>
