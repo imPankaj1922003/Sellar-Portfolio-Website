@@ -1,14 +1,14 @@
 import './App.css';
-import Navbar from './components/Navbar/Navbar.jsx';
-import HeroSection from './components/HeroSection/HeroSection.jsx';
-import WhySellar from './components/WhySellar/WhySellar.jsx';
-import CoreSolution from './components/CoreSolutions/CoreSolution.jsx';
-import PricingTable from './components/PricingTable/PricingTable';
-import FutureVision from './components/FutureVision/FutureVision.jsx';
-import AppShowcase from './components/AppShowCase/AppShowCase.jsx';
-import CatalogueShowCase from './components/CatalogueShowCase/CatalogueShowCase.jsx';
-import Contact from './components/Contact/Contact.jsx';
-import Footer from './components/Footer/Footer.jsx';
+import Navbar from './Component/Navbar/Navbar.jsx';
+import HeroSection from './Component/HeroSection/HeroSection.jsx';
+import WhySellar from './Component/WhySellar/WhySellar.jsx';
+import CoreSolution from './Component/CoreSolutions/CoreSolution.jsx';
+import PricingTable from './Component/PricingTable/PricingTable';
+import FutureVision from './Component/FutureVision/FutureVision.jsx';
+import AppShowcase from './Component/AppShowCase/AppShowCase.jsx';
+import CatalogueShowCase from './Component/CatalogueShowCase/CatalogueShowCase.jsx';
+import Contact from './Component/Contact/Contact.jsx';
+import Footer from './Component/Footer/Footer.jsx';
 
 const App = () => {
   return (
