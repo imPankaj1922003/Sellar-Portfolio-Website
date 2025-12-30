@@ -80,7 +80,7 @@ const Pricing = () => {
                             </div>
 
                             <div className="plan-column-head highlighted">
-                                <div className="badge-rec">RECOMMENDED</div>
+                                <div className="badge-rec">Best Sellar</div>
                                 <span className="p-title">{activeService === 'pos' ? 'POS Pro' : 'E-Cat Pro'}</span>
                                 <span className="p-price">₹{pricing[activeService].pro}</span>
                                 <span className="p-cycle">per {isYearly ? 'year' : '4 weeks'}</span>
