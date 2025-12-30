@@ -31,8 +31,7 @@ const HeroSection = () => {
                     
                     {/* Subtitle */}
                     <p className="text-base md:text-xl text-slate-200 max-w-xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-                        Experience the world's fastest POS and Inventory management system.
-                        Designed for speed, built for scale.
+                        Run your entire Business. From one APP!
                     </p>
 
                     {/* Buttons Wrapper */}

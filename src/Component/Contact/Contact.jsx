@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Contact.css';
 // Ensure this path matches where you actually saved your firebase.js file
-import { db } from '../../Lib/Firebase'; 
-import { collection, addDoc } from 'firebase/firestore'; 
+// import { db } from '../../Lib/Firebase'; 
+// import { collection, addDoc } from 'firebase/firestore'; 
 
 const Contact = () => {
     // 1. State for form data

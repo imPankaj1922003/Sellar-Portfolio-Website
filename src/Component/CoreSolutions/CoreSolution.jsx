@@ -3,11 +3,11 @@ import './CoreSolution.css';
 
 const CoreSolution = () => {
     const allSolutions = [
-        { title: "POS Billing", icon: "💳", desc: "Super fast checkout with GST support." },
-        { title: "Smart Inventory", icon: "📦", desc: "Auto stock alerts and easy management." },
-        { title: "Deep Analytics", icon: "📈", desc: "Track daily profit, loss, and growth." },
-        { title: "E-Catalogue", icon: "🌐", desc: "Turn your stock into an online store." },
-        { title: "Staff Access", icon: "👥", desc: "Manage staff roles and permissions safely." },
+        { title: "POSI-POS/Inventory Billing", icon: "💳", desc: "Super fast checkout with GST support." },
+        { title: "CATALOG - Online Catalog", icon: "📦", desc: "Auto stock alerts and easy management." },
+        { title: "HRMS (coming soon)", icon: "📈", desc: "Track daily profit, loss, and growth." },
+        { title: "Service Calendar (coming soon)", icon: "🌐", desc: "Turn your stock into an online store." },
+        { title: "E-Dukan (coming soon)", icon: "👥", desc: "Manage staff roles and permissions safely." },
         // { title: "Vendor Panel", icon: "🤝", desc: "Easy tracking of purchases and dues." }
     ];
 
@@ -17,7 +17,7 @@ const CoreSolution = () => {
                 <div className="solutions-header">
                     <span className="mini-title">POWERING YOUR BUSINESS</span>
                     <h2 className="section-h2">Core <span className="blue-text">Solutions</span></h2>
-                    <p className="section-p">Everything you need to manage and grow your retail business in one place.</p>
+                    <p className="section-p">All the essential tools to run and grow your business on one platform</p>
                 </div>
 
                 <div className="solutions-grid">

@@ -5,27 +5,27 @@ const CatalogueShowCase = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const catalogueFeatures = [
-        { 
-            title: "PDF Export", 
-            icon: "📑", 
+        {
+            title: "Dashboard",
+            icon: "📑",
             desc: "Professional catalogues in one click",
             ui: { label: "PDFs Generated", value: "128", color: "#007EA7", subText: "Ready to share", trend: "Fast" }
         },
-        { 
-            title: "WhatsApp", 
-            icon: "💬", 
+        {
+            title: "Orders",
+            icon: "💬",
             desc: "Receive orders directly on chat",
             ui: { label: "WhatsApp Leads", value: "+45", color: "#25D366", subText: "Active chats", trend: "High" }
         },
-        { 
-            title: "Pricing", 
-            icon: "💰", 
+        {
+            title: "Shop Page",
+            icon: "💰",
             desc: "Manage bulk & retail rates",
             ui: { label: "Price Updates", value: "Active", color: "#f59e0b", subText: "Synced with store", trend: "Live" }
         },
-        { 
-            title: "QR Menu", 
-            icon: "🔍", 
+        {
+            title: "Item Page",
+            icon: "🔍",
             desc: "Instant scan-to-view",
             ui: { label: "QR Scans Today", value: "320", color: "#6366f1", subText: "In-store visitors", trend: "↑ 20%" }
         }
@@ -34,7 +34,7 @@ const CatalogueShowCase = () => {
     return (
         <section className="cat-premium-section">
             <div className="cat-premium-wrapper">
-                
+
                 {/* MOBILE ONLY HEADING */}
                 <div className="cat-mobile-header">
                     <span className="mini-badge">SMART CATALOGUE</span>
@@ -42,21 +42,23 @@ const CatalogueShowCase = () => {
                 </div>
 
                 <div className="cat-premium-container">
-                    
+
                     {/* LEFT SIDE: BUTTONS */}
                     <div className="cat-premium-content">
                         <div className="cat-desktop-header">
-                            <span className="cat-premium-badge">SMART CATALOGUE</span>
+                            <span className="cat-premium-badge">Smart Digital Catalog</span>
                             <h2 className="cat-premium-h2">
-                                Your Products, Now <br />
-                                <span className="text-glow-blue">Digital & Interactive.</span>
+                                <span className="text-glow-blue">DIGITAL STOREFRONT</span>
                             </h2>
+                            <p className="mt-4 mb-6 text-slate-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                                 A simple online catalogue to showcase, manage, and sell your products.
+                            </p>
                         </div>
-                        
+
                         <div className="cat-interactive-grid">
                             {catalogueFeatures.map((item, index) => (
-                                <button 
-                                    className={`cat-feature-btn ${activeTab === index ? 'active' : ''}`} 
+                                <button
+                                    className={`cat-feature-btn ${activeTab === index ? 'active' : ''}`}
                                     key={index}
                                     onClick={() => setActiveTab(index)}
                                     type="button"
@@ -100,7 +102,7 @@ const CatalogueShowCase = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="cat-app-footer">
                                         <div className="f-icon active">🏠</div>
                                         <div className="f-icon">📦</div>

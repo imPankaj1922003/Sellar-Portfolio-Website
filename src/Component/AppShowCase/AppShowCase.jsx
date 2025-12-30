@@ -7,19 +7,19 @@ const AppShowCase = () => {
   // Premium UI Data for Phone
   const features = [
     { 
-      icon: "📊", title: "Billing", 
+      icon: "📊", title: "Dashboard", 
       ui: { label: "Daily Sales", value: "₹45,200", color: "#007EA7", subText: "24 Invoices", percent: 75, trend: "↑ 12%" } 
     },
     { 
-      icon: "📦", title: "Stock", 
+      icon: "📦", title: "Transactions", 
       ui: { label: "Inventory", value: "1,240", color: "#f59e0b", subText: "5 Items Low", percent: 40, trend: "Stable" } 
     },
     { 
-      icon: "📄", title: "Reports", 
+      icon: "📄", title: "Sales Voucher", 
       ui: { label: "Net Profit", value: "₹18,400", color: "#10b981", subText: "Monthly", percent: 90, trend: "↑ 08%" } 
     },
     { 
-      icon: "👥", title: "Staff", 
+      icon: "👥", title: "Reports", 
       ui: { label: "Attendance", value: "12/12", color: "#6366f1", subText: "All Present", percent: 100, trend: "Active" } 
     }
   ];
@@ -32,8 +32,12 @@ const AppShowCase = () => {
         <div className="showcase-header">
           <span className="mini-badge">ALL-IN-ONE POS</span>
           <h2 className="showcase-title">
-            Business Management <br /> <span className="blue-highlight">Simplified.</span>
+            Billing and Business Management, <br /> <span className="blue-highlight"> Simplified</span>
           </h2>
+          {/* --- NEW SUB-HEADING WITH TAILWIND --- */}
+          <p className="mt-4 text-slate-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Manage Billing, Inventory, Customers, Payments, and Reports seamlessly from a single Dashboard.
+          </p>
         </div>
 
         <div className="display-container">
@@ -41,7 +45,7 @@ const AppShowCase = () => {
             <div className="phone-area">
               <div className="iphone-frame">
                 <div className="iphone-screen">
-                   <div className="sellar-app-container">
+                    <div className="sellar-app-container">
                       {/* App Header */}
                       <div className="app-header-mini">
                         <div className="app-user-info">
@@ -94,7 +98,7 @@ const AppShowCase = () => {
                         <div className="nav-icon">📁</div>
                         <div className="nav-icon">⚙️</div>
                       </div>
-                   </div>
+                    </div>
                 </div>
               </div>
             </div>

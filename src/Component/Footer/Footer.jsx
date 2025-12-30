@@ -2,7 +2,7 @@ import React from 'react'
 import "./Footer.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import footerLogo from '../../assets/sellar-logo-heading.png';
+import footerLogo from '../../assets/Sellar_Logo_white.png';
 
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
                             <img
                                 src={footerLogo}
                                 alt="Sellar Logo"
-                                style={{ height: '40px', width: 'auto', marginBottom: '15px' }}
+                                style={{ height: '40px', width: 'auto', marginBottom: '25px' }}
                             />
                             <p>The modern operating system for retail businesses. Empowering shops with digital tools to grow faster.</p>
                             <div className="social-links">
