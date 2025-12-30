@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Contact.css';
+// Ensure this path matches where you actually saved your firebase.js file
+import { db } from '../../Lib/Firebase'; 
+import { collection, addDoc } from 'firebase/firestore'; 
 
 const Contact = () => {
-    // 1. Saari fields ke liye state banayi
+    // 1. State for form data
     const [formData, setFormData] = useState({
         fullName: '',
         phone: '',
@@ -10,6 +13,9 @@ const Contact = () => {
         city: '',
         message: ''
     });
+
+    // 2. State for loading status (Fixed: this was missing in your code)
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,20 +26,36 @@ const Contact = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true); // Disable button while sending
 
-        console.log("Form Data Sent:", formData);
-        // Message sent hone ke baad state reset kar di
-        setFormData({
-            fullName: '',
-            phone: '',
-            email: '',
-            city: '',
-            message: ''
-        });
+        try {
+            // 3. Send data to Firebase Firestore
+            // "contacts" is the name of the collection in your database
+            await addDoc(collection(db, "contacts"), {
+                ...formData,
+                submittedAt: new Date() // Adds a timestamp so you know when they messaged
+            });
 
-        // alert("Message Sent Successfully! Fields have been cleared.");
+            console.log("Form Data Sent:", formData);
+            alert("Message Sent Successfully!");
+
+            // 4. Reset form after success
+            setFormData({
+                fullName: '',
+                phone: '',
+                email: '',
+                city: '',
+                message: ''
+            });
+
+        } catch (error) {
+            console.error("Error adding document: ", error);
+            alert("Something went wrong. Please check your internet connection.");
+        }
+
+        setIsSubmitting(false); // Re-enable button
     };
 
     return (
@@ -109,7 +131,9 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="send-btn">Send Message</button>
+                        <button type="submit" className="send-btn" disabled={isSubmitting}>
+                            {isSubmitting ? "Sending..." : "Send Message"}
+                        </button>
                     </form>
                 </div>
             </div>
