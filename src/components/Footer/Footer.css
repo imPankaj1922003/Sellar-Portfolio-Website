@@ -2,7 +2,9 @@
 .mega-footer {
     background: #00171f;
     /* Responsive padding: Top/Bottom balanced */
-    padding: clamp(60px, 8vw, 80px) 20px 30px; 
+    /* padding: clamp(60px, 8vw, 80px) 20px 30px;  */
+    padding:50px;
+    /* padding-left: 60px; */
     color: #94a3b8;
     position: relative;
     overflow: hidden;

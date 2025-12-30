@@ -8,7 +8,7 @@ const CoreSolution = () => {
         { title: "Deep Analytics", icon: "📈", desc: "Track daily profit, loss, and growth." },
         { title: "E-Catalogue", icon: "🌐", desc: "Turn your stock into an online store." },
         { title: "Staff Access", icon: "👥", desc: "Manage staff roles and permissions safely." },
-        { title: "Vendor Panel", icon: "🤝", desc: "Easy tracking of purchases and dues." }
+        // { title: "Vendor Panel", icon: "🤝", desc: "Easy tracking of purchases and dues." }
     ];
 
     return (
