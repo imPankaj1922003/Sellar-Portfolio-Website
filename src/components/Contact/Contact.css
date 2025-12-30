@@ -1,4 +1,10 @@
 /* --- PREMIUM LIGHT CONTACT SECTION --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .contact-section {
     padding: 80px 20px;
     /* Soft Light Gradient */
@@ -35,7 +41,8 @@
 .contact-info h2 {
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 900;
-    color: #00171f; /* Solid Dark Navy */
+    color: #00171f;
+    /* Solid Dark Navy */
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -1.5px;
@@ -60,7 +67,8 @@
 
 .contact-info p {
     font-size: 1.1rem;
-    color: #475569; /* Slate Gray */
+    color: #475569;
+    /* Slate Gray */
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -80,7 +88,8 @@
 }
 
 .c-feat span {
-    color: #10b981; /* Emerald Green for ticks */
+    color: #10b981;
+    /* Emerald Green for ticks */
     font-size: 1.2rem;
 }
 
@@ -123,7 +132,7 @@
 .input-group textarea {
     padding: 14px 20px;
     border-radius: 14px;
-    border: 1.5px solid #e2e8f0;
+    border: 1.5px solid #889098;
     background: #fcfdfe;
     color: #0f172a;
     font-size: 0.95rem;
@@ -160,29 +169,83 @@
     box-shadow: 0 10px 20px rgba(0, 52, 89, 0.15);
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE OPTIMIZATION --- */
 @media (max-width: 992px) {
+    .contact-section {
+        padding: 40px 10px;
+        /* Section ki top/bottom padding kam ki aur sides se 10px rakha */
+    }
+
     .contact-container {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
+        gap: 30px;
+        /* Left info aur form ke beech ka gap kam kiya */
+        width: 100%;
+        max-width: 100%;
+        /* Ensure container doesn't overflow */
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        padding: 0 10px;
+    }
+
+    .contact-form-card {
+        padding: 25px 15px;
+        /* Form card ki andar ki padding kam ki */
+        margin: 0;
+        /* Extra margins reset */
+        border-radius: 20px;
+        /* Choti screen ke liye corners thode sharp */
+        width: 100%;
     }
 
     .form-row {
-        grid-template-columns: 1fr; /* Mobile pe stack ho jayega */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 fields per line */
+        gap: 10px;
+        /* Minimised gap to prevent overflow */
     }
 
-    .contact-features {
-        align-items: center;
+    .input-group input,
+    .input-group textarea {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 10px 10px;
+        /* Small padding for more typing space */
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-form-card {
-        padding: 30px 20px;
+    .contact-section {
+        padding: 30px 5px;
+        /* Almost edge to edge */
     }
 
     .contact-info h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        gap: 8px;
+        /* Extra tight gap for tiny screens */
+    }
+
+    .input-group label {
+        font-size: 0.75rem;
+        margin-left: 2px;
+    }
+
+    .send-btn {
+        padding: 14px;
+        font-size: 0.9rem;
     }
 }

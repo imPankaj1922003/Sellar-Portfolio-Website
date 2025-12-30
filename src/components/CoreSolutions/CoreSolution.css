@@ -70,6 +70,15 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* --- LAST CARD CENTER LOGIC --- */
+/* Jab 5 cards honge, toh 5th card center mein aayega */
+.sol-card:last-child:nth-child(odd) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    max-width: 490px; /* Do cards ke gap ke hisaab se width set ki hai */
+    width: 100%;
+}
+
 .sol-card:hover {
     transform: translateY(-8px);
     background: rgba(30, 41, 59, 1);
@@ -110,7 +119,6 @@
 
     .solutions-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Mobile pe bhi 2 cards */
         gap: 12px;
     }
 
@@ -121,9 +129,15 @@
         gap: 15px;
     }
 
+    /* Mobile pe bhi last card center rahega */
+    .sol-card:last-child:nth-child(odd) {
+        grid-column: 1 / span 2;
+        max-width: 100%;
+    }
+
     .sol-text p {
         display: none;
-        /* Mobile par description hide, space bachane ke liye */
+        /* Mobile par description hide */
     }
 
     .sol-text h3 {

@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="footer-grid-layout">
                         {/* Brand Column */}
                         <div className="footer-brand">
-                            <div className="logo white">sellar<span className=''>.in</span></div>
+                            <div className="logo white">sellar<span className='text-blue-500'>.in</span></div>
                             <p>The modern operating system for retail businesses. Empowering shops with digital tools to grow faster.</p>
                             <div className="social-links">
                                 <a href="https://facebook.com/yourpage" target="_blank" rel="noreferrer">

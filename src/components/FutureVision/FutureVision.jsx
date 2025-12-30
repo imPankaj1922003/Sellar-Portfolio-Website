@@ -1,47 +1,64 @@
-import React from 'react'
-import "./FurureVision.css"
+import React from 'react';
+import './FutureVision.css';
+
 const FutureVision = () => {
     return (
-        <div>
-            <section className="vision-section" id="vision">
-                <div className="container">
-                    <div className="vision-card-premium">
-                        <div className="vision-content">
-                            <span className="vision-badge">COMING SOON</span>
-                            <h2>The Future of <span className="text-glow">Smart Retail</span></h2>
-                            <p>We're not just a POS. We are building an ecosystem to help you scale faster with data-driven intelligence.</p>
+        <section className="vision-section" id="vision">
+            {/* Background Glows for Dark Theme */}
+            <div className="vision-glow-top"></div>
+            
+            <div className="vision-container">
+                <div className="vision-header-main">
+                    <span className="vision-badge-neon">UPCOMING TECH</span>
+                    <h2 className="vision-title">
+                        Beyond <span className="gradient-text">Traditional Billing</span>
+                    </h2>
+                    <p className="vision-subtitle">
+                        Don't just manage your business—evolve it. Experience an intelligent retail ecosystem designed to forecast trends and automate growth before you even ask.
+                    </p>
+                </div>
 
-                            <div className="vision-features-grid">
-                                <div className="v-feature">
-                                    <div className="v-dot blue"></div>
-                                    <div>
-                                        <h4>AI Demand Forecast</h4>
-                                        <p>Predict which items will go out of stock before they do.</p>
-                                    </div>
-                                </div>
-                                <div className="v-feature">
-                                    <div className="v-dot purple"></div>
-                                    <div>
-                                        <h4>B2B Marketplace</h4>
-                                        <p>Connect directly with wholesalers for the best bulk prices.</p>
-                                    </div>
-                                </div>
+                <div className="vision-grid-premium">
+                    {/* Main Feature Card */}
+                    <div className="vision-main-card">
+                        <div className="vision-card-inner">
+                            <div className="icon-wrap-neon">🤖</div>
+                            <h3>AI-Driven Forecast</h3>
+                            <p>Hamara smart engine aapke sales data ko analyze karke batayega ki kal kya bikne wala hai. Never miss a sale due to out-of-stock items.</p>
+                            <div className="card-status">
+                                <span className="status-dot"></span> In Development
                             </div>
+                        </div>
+                    </div>
 
-                            <div className="tags-row">
-                                <span>#AI_Forecast</span>
-                                <span>#B2B_Connect</span>
-                                <span>#Auto_Sourcing</span>
+                    {/* Side Features Stack */}
+                    <div className="vision-side-stack">
+                        <div className="side-card glass-blue">
+                            <div className="side-icon">🤝</div>
+                            <div className="side-info">
+                                <h4>B2B Marketplace</h4>
+                                <p>Direct connection with manufacturers.</p>
                             </div>
                         </div>
 
-                        {/* Decorative Gradient Ball for glass effect */}
-                        <div className="vision-glass-deco"></div>
+                        <div className="side-card glass-purple">
+                            <div className="side-icon">📊</div>
+                            <div className="side-info">
+                                <h4>Predictive Analytics</h4>
+                                <p>Automated profit & loss insights.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
-    )
-}
 
-export default FutureVision
+                <div className="vision-bottom-tags">
+                    <span className="v-tag">#SmartRetail</span>
+                    <span className="v-tag">#FutureOfPOS</span>
+                    <span className="v-tag">#SellarIntelligence</span>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default FutureVision;
