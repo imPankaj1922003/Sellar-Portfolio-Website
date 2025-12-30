@@ -1,4 +1,4 @@
-/* --- CATALOGUE PREMIUM SECTION --- */
+/* --- SECTION STYLING --- */
 .cat-premium-section {
     padding: clamp(60px, 10vw, 100px) 20px;
     background-color: #ffffff;
@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-/* --- MOBILE HEADER (Hidden on Desktop) --- */
+/* --- MOBILE HEADER --- */
 .cat-mobile-header {
     display: none;
 }
@@ -22,7 +22,6 @@
 .cat-premium-container {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    /* Desktop: Content Left, Phone Right */
     gap: clamp(40px, 6vw, 100px);
     align-items: center;
 }
@@ -60,7 +59,7 @@
     margin-bottom: 40px;
 }
 
-/* --- DESKTOP BUTTONS --- */
+/* --- DESKTOP BUTTONS (Animation Removed) --- */
 .cat-feature-btn {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -70,7 +69,7 @@
     align-items: center;
     gap: 18px;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease; /* Simple transition */
     text-align: left;
     width: 100%;
     outline: none;
@@ -80,7 +79,7 @@
 .cat-feature-btn.active {
     border-color: #007EA7;
     box-shadow: 0 20px 40px rgba(0, 126, 167, 0.1);
-    transform: translateX(20px);
+    /* transform: translateX(20px) HATA DIYA HAI */
 }
 
 .cat-btn-icon {
@@ -114,11 +113,11 @@
     color: #64748b;
 }
 
-/* --- PHONE MOCKUP (Desktop) --- */
+/* --- PHONE MOCKUP (Straight Version) --- */
 .cat-premium-visual {
     display: flex;
     justify-content: center;
-    perspective: 1200px;
+    /* perspective hata di kyunki phone seedha hai */
     position: relative;
 }
 
@@ -130,7 +129,8 @@
     border-radius: 50px;
     position: relative;
     z-index: 2;
-    transform: rotateY(-10deg) rotateX(2deg);
+    /* Tilt values (rotateY/rotateX) 0 kar di hain */
+    transform: none; 
     box-shadow: 0 50px 100px rgba(0, 0, 0, 0.15);
 }
 
@@ -164,13 +164,6 @@
     color: #00171f;
 }
 
-.cat-app-nav .dot {
-    width: 8px;
-    height: 8px;
-    background: #cbd5e1;
-    border-radius: 50%;
-}
-
 .cat-app-body {
     padding: 25px;
     animation: slideUp 0.4s ease-out;
@@ -181,7 +174,6 @@
         opacity: 0;
         transform: translateY(15px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -194,25 +186,6 @@
     color: #fff;
 }
 
-.cat-status-card h3 {
-    font-size: 26px;
-    margin: 10px 0;
-    font-weight: 800;
-}
-
-.cat-mini-progress {
-    height: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.cat-mini-progress .bar {
-    width: 75%;
-    height: 100%;
-    background: #fff;
-}
-
 .cat-app-footer {
     margin-top: auto;
     padding: 20px;
@@ -222,7 +195,7 @@
     background: #fff;
 }
 
-/* --- MOBILE VIEW (AppShowCase Style) --- */
+/* --- MOBILE VIEW --- */
 @media (max-width: 768px) {
     .cat-mobile-header {
         display: block;
@@ -315,21 +288,5 @@
 
     .cat-phone-screen {
         border-radius: 25px;
-    }
-
-    .cat-app-body {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 400px) {
-    .cat-phone-mockup {
-        width: 190px;
-        height: 380px;
-    }
-
-    .cat-btn-icon {
-        width: 48px;
-        height: 48px;
     }
 }
