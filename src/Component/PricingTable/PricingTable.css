@@ -1,4 +1,19 @@
 /* --- SECTION & CONTAINER --- */
+
+.tick {
+    color: #22c55e;
+    /* Green */
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.cross {
+    color: #ef4444;
+    /* Red */
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
 .pricing-section {
     padding: 80px 20px;
     background: #f8fafc;

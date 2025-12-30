@@ -61,7 +61,7 @@
     /* Dark Glass Card */
     backdrop-filter: blur(10px);
     padding: 25px;
-    border-radius: 20px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 20px;

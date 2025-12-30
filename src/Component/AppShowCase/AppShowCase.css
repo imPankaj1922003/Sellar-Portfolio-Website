@@ -1,29 +1,25 @@
-/* --- SECTION STYLING --- */
+/* --- MAIN SECTION --- */
 .app-showcase-section {
     padding: 80px 20px;
     background: radial-gradient(circle at 0% 0%, #fdfeff 0%, #f1f5f9 100%);
     font-family: 'Inter', sans-serif;
-    position: relative;
     overflow: hidden;
 }
 
 .showcase-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
 }
 
 .showcase-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .showcase-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #0f172a;
-    letter-spacing: -1.5px;
     line-height: 1.1;
 }
 
@@ -43,192 +39,74 @@
     margin-bottom: 15px;
 }
 
-/* --- DESKTOP LAYOUT --- */
+.showcase-subtitle {
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- DISPLAY LAYOUT --- */
 .display-container {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
 }
 
+/* --- PHONE STYLING --- */
 .phone-area {
     display: flex;
     justify-content: flex-end;
-    /* perspective hata diya taaki tilt na dikhe */
 }
 
 .iphone-frame {
     width: 280px;
-    height: 560px;
+    height: 570px;
     background: #000;
-    border: 11px solid #1e293b;
+    border: 12px solid #1e293b;
     border-radius: 45px;
     position: relative;
     box-shadow: 0 50px 100px rgba(15, 23, 42, 0.15);
-    /* rotateY(-5deg) hata diya taaki phone ekdum straight rahe */
-    transform: none; 
 }
 
 .iphone-screen {
     width: 100%;
     height: 100%;
     background: #fff;
-    border-radius: 34px;
+    border-radius: 33px;
     overflow: hidden;
+    position: relative;
 }
 
-/* --- PHONE INTERNAL UI --- */
-.sellar-app-container {
-    padding: 25px 18px;
-    display: flex;
-    flex-direction: column;
+.phone-image-wrapper {
+    width: 100%;
     height: 100%;
-    background: #fdfdfd;
+    animation: slideIn 0.4s ease-out;
 }
 
-.app-header-mini {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.app-user-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.user-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.welcome-msg {
-    font-size: 9px;
-    color: #94a3b8;
-    margin: 0;
-}
-
-.store-name {
-    font-size: 12px;
-    font-weight: 800;
-    color: #0f172a;
-    margin: 0;
-}
-
-.app-stats-card {
-    padding: 18px;
-    border-radius: 20px;
-    color: #fff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.card-top {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    opacity: 0.9;
-}
-
-.trend-badge {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 2px 6px;
-    border-radius: 50px;
-}
-
-.card-amount {
-    font-size: 22px;
-    font-weight: 800;
-    margin: 8px 0;
-}
-
-.progress-container {
-    height: 4px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin-bottom: 8px;
-    overflow: hidden;
-}
-
-.progress-bar {
+.app-screenshot {
+    width: 100%;
     height: 100%;
-    background: #fff;
-    transition: 1s ease;
+    object-fit: cover;
+    /* Image ko properly fit karne ke liye */
 }
 
-.card-footer-text {
-    font-size: 10px;
-    opacity: 0.8;
-    margin: 0;
-}
-
-.activity-section {
-    margin-top: 20px;
-}
-
-.section-label {
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #0f172a;
-}
-
-.activity-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px;
-    background: #fff;
-    border-radius: 12px;
-    margin-bottom: 8px;
-    border: 1px solid #f1f5f9;
-}
-
-.activity-details p {
-    font-size: 10px;
-    font-weight: 600;
-    margin: 0;
-    color: #334155;
-}
-
-.activity-details span {
-    font-size: 8px;
-    color: #94a3b8;
-}
-
-.app-navbar-mini {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    border-top: 1px solid #f1f5f9;
-}
-
-/* Content Fade Animation */
-.app-main-content {
-    animation: slideUp 0.4s ease-out;
-}
-
-@keyframes slideUp {
+@keyframes slideIn {
     from {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* --- DESKTOP BUTTONS --- */
+/* --- BUTTONS STYLING --- */
 .features-area {
     display: flex;
     flex-direction: column;
@@ -238,7 +116,7 @@
 .feature-btn {
     background: #fff;
     border: 1px solid #e2e8f0;
-    padding: 22px;
+    padding: 20px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -246,26 +124,24 @@
     cursor: pointer;
     transition: 0.3s;
     text-align: left;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .feature-btn.active {
     border-color: #007EA7;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transform: translateX(15px);
+    box-shadow: 0 10px 25px rgba(0, 126, 167, 0.1);
+    transform: translateX(10px);
 }
 
 .icon-box {
-    font-size: 24px;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background: #f8fafc;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 24px;
     flex-shrink: 0;
-    transition: 0.3s;
 }
 
 .feature-btn.active .icon-box {
@@ -275,99 +151,109 @@
 
 .feature-text h4 {
     margin: 0;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
     color: #0f172a;
 }
 
 .feature-text p {
-    margin: 2px 0 0 0;
+    margin: 4px 0 0 0;
     font-size: 13px;
     color: #64748b;
 }
 
-/* --- MOBILE VIEW --- */
+/* --- MOBILE RESPONSIVE (As you requested earlier) --- */
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
-    .app-showcase-section {
-        padding: 40px 10px;
-    }
-
     .display-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .showcase-title {
-        font-size: 1.8rem;
+        align-items: center; /* Center align phone and buttons */
+        gap: 10px;
     }
 
     .phone-area {
-        width: 65%;
-        justify-content: flex-start;
+        width: 62%; /* Slightly increased for better visibility */
+        justify-content: center;
     }
 
     .iphone-frame {
-        width: 215px;
-        margin-left: 10px;
-        height: 430px;
-        border-width: 6px;
-        border-radius: 30px;
-        transform: none; /* Mobile par bhi straight rahega */
+        width: 215px; /* Adjusting size for better image ratio */
+        height: 440px;
+        border-width: 8px;
+        border-radius: 35px;
+        background: #000;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
 
     .iphone-screen {
-        border-radius: 24px;
+        border-radius: 26px;
+        background: #fff;
     }
 
-    .sellar-app-container {
-        padding: 18px 12px;
+    /* --- IMAGE FIX FOR MOBILE --- */
+    .app-screenshot {
+        width: 100%;
+        height: 100%;
+        /* Change from cover to contain or fill to see full UI */
+        object-fit: fill; 
+        display: block;
     }
 
     .features-area {
-        width: 32%;
-        align-items: flex-end;
-        gap: 15px;
+        width: 35%;
+        align-items: center;
+        gap: 20px; /* Better spacing between small buttons */
     }
 
     .feature-btn {
-        padding: 0;
-        border: none;
-        background: transparent !important;
         flex-direction: column;
-        width: auto;
-        gap: 4px;
-        outline: none;
-        box-shadow: none !important;
-        transform: none !important;
-        margin-right: 30px;
+        padding: 0;
+        background: transparent !important;
+        border: none !important;
+        gap: 6px;
+        width: 100%;
+        transform: none !important; /* Mobile pe slide band */
     }
 
     .icon-box {
         width: 52px;
         height: 52px;
-        border-radius: 50%;
+        border-radius: 8px; /* Slightly smoother rectangle */
         border: 2px solid #e2e8f0;
         background: #fff;
-        margin: 0;
+        font-size: 20px;
     }
 
     .feature-btn.active .icon-box {
         border-color: #007EA7;
         background: #f0f9ff;
-        color: inherit;
-        transform: scale(1.1);
+        color: #007EA7; /* Keeping icon color consistent */
     }
 
     .feature-text h4 {
         font-size: 10px;
         text-align: center;
         font-weight: 800;
+        color: #0f172a;
+        white-space: nowrap;
     }
 
     .feature-text p {
         display: none;
+    }
+}
+
+/* Extra Small Devices Fix */
+@media (max-width: 400px) {
+    .iphone-frame {
+        width: 180px;
+        height: 370px;
+    }
+    
+    .icon-box {
+        width: 45px;
+        height: 45px;
     }
 }
