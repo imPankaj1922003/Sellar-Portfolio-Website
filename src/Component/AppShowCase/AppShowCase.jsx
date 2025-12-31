@@ -7,19 +7,19 @@ const AppShowCase = () => {
   const features = [
     {
       icon: "📊", title: "Dashboard",
-      img: "/Sellar Dashboard.jpeg" 
+      img: "/dashboard.png" 
     },
     {
       icon: "📦", title: "Transactions",
-      img: "/Transactions.jpeg"
+      img: "/Transaction.png"
     },
     {
       icon: "📄", title: "Sales Voucher",
-      img: "/Sales.jpeg"
+      img: "/Final.png"
     },
     {
       icon: "👥", title: "Reports",
-      img: "/Reports.jpeg"
+      img: "/Reports.png"
     }
   ];
 

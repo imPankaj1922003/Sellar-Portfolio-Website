@@ -3,11 +3,14 @@ import './WhySellar.css';
 
 const WhySellar = () => {
     const comparisonData = [
-        { feature: "Order Tracking", old: "Manual & Messy", sellar: "Smart AI Dashboard" },
-        { feature: "Hidden Costs", old: "Surprise Charges", sellar: "Zero Hidden Fees" },
-        { feature: "Settlements", old: "3-5 Business Days", sellar: "Instant T+0 Payouts" },
-        { feature: "Support", old: "Ticket/Email Only", sellar: "24/7 Priority Manager" },
-        { feature: "GST Billing", old: "Manual Calculation", sellar: "Auto-GST Compliance" },
+        { feature: "System Requirement", others: "Needs a dedicated device", sellar: "works on any device simultaneously" },
+        { feature: "Costing", others: "Range from INR 5000 pa to INR 25000 pa", sellar: "starts at INR 999 pa" },
+        { feature: "Number of Users", others: "Pay extra per user", sellar: "includes upto 20 users per subscription" },
+        { feature: "Ease of use", others: "complex interface", sellar: " Super easy; only what you need" },
+        { feature: "Order Tracking", others: "requires manual updates or third-party tools.", sellar: "Live status updates" },
+        { feature: "Reporting", others: "Raw data difficult to interpret", sellar: "Smart, structured reports designed" },
+        { feature: "Dashboard", others: "Confusing or non-existent.", sellar: "crisp, clear, and informative" },
+        { feature: "Storage", others: "Tied to local hard drives", sellar: "100% cloud-based; access your data securely from anywhere." },
     ];
 
     return (
@@ -33,7 +36,7 @@ const WhySellar = () => {
                                 <tr key={index}>
                                     <td className="feature-name">{item.feature}</td>
                                     <td className="old-way">
-                                        <span className="status-icon cross">✕</span> {item.old}
+                                        <span className="status-icon cross">✕</span> {item.others}
                                     </td>
                                     <td className="sellar-way">
                                         <span className="status-icon check">✓</span> {item.sellar}
