@@ -6,7 +6,7 @@ const FutureVision = () => {
         <section className="vision-section" id="vision">
             {/* Background Glows for Dark Theme */}
             <div className="vision-glow-top"></div>
-            
+
             <div className="vision-container">
                 <div className="vision-header-main">
                     <span className="vision-badge-neon">UPCOMING TECH</span>
@@ -24,7 +24,6 @@ const FutureVision = () => {
                         <div className="vision-card-inner">
                             <div className="icon-wrap-neon">🤖</div>
                             <h3>AI-Driven Forecast</h3>
-                            <p>Hamara smart engine aapke sales data ko analyze karke batayega ki kal kya bikne wala hai. Never miss a sale due to out-of-stock items.</p>
                             <div className="card-status">
                                 <span className="status-dot"></span> In Development
                             </div>

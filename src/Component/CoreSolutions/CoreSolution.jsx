@@ -2,7 +2,7 @@ import React from 'react';
 
 const CoreSolution = () => {
     const allSolutions = [
-        { title: "POSI", icon: "💳", subheading:"POS/Inventory Billing", desc: "Manage Billing, Inventory, Customers, Payments, and Reports seamlessly from a single Dashboard.", comingSoon: false },
+        { title: "POSI", icon: "💳", subheading:"POS & Inventory", desc: "Manage Billing, Inventory, Customers, Payments, and Reports seamlessly from a single Dashboard.", comingSoon: false },
         { title: "CATALOG ", icon: "📦", subheading:"Online Catalog", desc: "A simple online catalogue to showcase, manage, and sell your products.", comingSoon: false },
         { title: "HRMS", icon: "📈", subheading:"", desc: "Manage staff payroll and attendance.", comingSoon: true },
         { title: "Service Calendar", icon: "🌐", subheading:"", desc: "", comingSoon: true },
@@ -39,7 +39,7 @@ const CoreSolution = () => {
                             className={`
                                 group relative 
                                 bg-slate-800/70 backdrop-blur-md 
-                                border border-white/5 rounded-xl 
+                                border border-white/5 rounded-sm 
                                 p-5 md:p-6 
                                 flex flex-col gap-3 md:gap-4 
                                 transition-all duration-300 ease-out 

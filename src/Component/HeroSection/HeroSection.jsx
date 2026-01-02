@@ -38,14 +38,14 @@ const HeroSection = () => {
                     <div className="flex flex-col md:flex-row justify-center gap-4 w-full md:w-auto px-2">
                         
                         {/* Primary Button */}
-                        <button className="flex-1 md:flex-none bg-white text-[#00171f] px-8 py-4 rounded-xl font-bold hover:-translate-y-1 transition-all duration-300 shadow-xl hover:bg-slate-100 whitespace-nowrap">
+                        <button className="flex-1 md:flex-none bg-white text-[#00171f] px-8 py-4 rounded-sm font-bold hover:-translate-y-1 transition-all duration-300 shadow-xl hover:bg-slate-100 whitespace-nowrap">
                             Start Free Trial
                         </button>
                         
                         {/* Secondary Button */}
                         <button 
                             onClick={() => setShowDemo(true)} 
-                            className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white/10 text-white px-8 py-4 rounded-xl font-bold border border-white/50 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm whitespace-nowrap"
+                            className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white/10 text-white px-8 py-4 rounded-sm font-bold border border-white/50 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm whitespace-nowrap"
                         >
                             <span className="text-xs">▶</span> Watch Demo
                         </button>
