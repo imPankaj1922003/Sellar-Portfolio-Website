@@ -38,9 +38,9 @@ const HeroSection = () => {
                     <div className="flex flex-col md:flex-row justify-center gap-4 w-full md:w-auto px-2">
                         
                         {/* Primary Button */}
-                        <button className="flex-1 md:flex-none bg-white text-[#00171f] px-8 py-4 rounded-sm font-bold hover:-translate-y-1 transition-all duration-300 shadow-xl hover:bg-slate-100 whitespace-nowrap">
+                        <a className="flex-1 md:flex-none bg-white text-[#00171f] px-8 py-4 rounded-sm font-bold hover:-translate-y-1 transition-all duration-300 shadow-xl hover:bg-slate-100 whitespace-nowrap" href="https://app.sellar.in/landing" target="_blank" rel="noopener noreferrer">
                             Start Free Trial
-                        </button>
+                        </a>
                         
                         {/* Secondary Button */}
                         <button 

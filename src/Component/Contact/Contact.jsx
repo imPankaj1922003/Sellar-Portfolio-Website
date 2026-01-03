@@ -118,7 +118,7 @@ const Contact = () => {
     return (
         <section 
             id='contact' 
-            className="relative py-20 px-5 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden font-sans"
+            className="relative py-12 px-5 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden font-sans"
         >
             {/* Background Decoration */}
             <div className="absolute -bottom-[10%] -left-[5%] w-[300px] h-[300px] bg-[#007EA7]/5 rounded-full blur-[80px] pointer-events-none"></div>
@@ -127,19 +127,19 @@ const Contact = () => {
                 
                 {/* --- LEFT SIDE: INFO --- */}
                 <div className="px-2 md:px-0">
-                    <span className="inline-block px-4 py-1.5 bg-sky-100 text-[#007EA7] rounded-full text-xs font-extrabold tracking-[1.5px] mb-5 border border-[#007EA7]/10">
+                    <span className="inline-block px-4 py-1.5 bg-sky-100 text-[#007EA7] rounded-full text-xs font-extrabold tracking-[1.5px] mb-4 border border-[#007EA7]/10">
                         GET IN TOUCH
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-black text-[#00171f] leading-tight mb-5 tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-black text-[#00171f] leading-tight mb-5 tracking-tight">
                         Let's Talk <span className="text-[#007EA7]">Business</span>
                     </h2>
-                    <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                    <p className="text-lg text-slate-600 leading-relaxed">
                         Have questions about Sellar? Our team is here to help you scale your retail business.
                     </p>
                 </div>
 
                 {/* --- RIGHT SIDE: FORM CARD --- */}
-                <div className="bg-white p-4 md:p-10 rounded-sm border border-[#007EA7]/10 shadow-[0_25px_50px_-12px_rgba(0,52,89,0.08)]">
+                <div className="bg-white p-4 md:p-10 mx-auto rounded-sm border border-[#007EA7]/10 shadow-[0_25px_50px_-12px_rgba(0,52,89,0.08)]">
                     <form className="flex flex-col gap-5" onSubmit={handleSubmit} noValidate>
                         
                         {/* Row 1: Name & Phone */}
@@ -153,7 +153,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="Your Name"
                                     required
-                                    className="w-full p-3.5 md:p-4 rounded-sm border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
+                                    className="w-full p-2 md:p-4 rounded-xl border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
                                 />
                             </div>
                             
@@ -165,9 +165,9 @@ const Contact = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    placeholder="9876543210"
+                                    placeholder="+91"
                                     required
-                                    className={`w-full p-3.5 md:p-4 rounded-sm border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
+                                    className={`w-full p-2 md:p-4 rounded-xl border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
                                     ${errors.phone ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-slate-300 focus:border-[#007EA7] focus:ring-[#007EA7]/10'}`}
                                 />
                                 {/* Error Message */}
@@ -188,7 +188,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="email@example.com"
                                     required
-                                    className={`w-full p-3.5 md:p-4 rounded-sm border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
+                                    className={`w-full p-2 md:p-4 rounded-xl border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
                                     ${errors.email ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-slate-300 focus:border-[#007EA7] focus:ring-[#007EA7]/10'}`}
                                 />
                                 {/* Error Message */}
@@ -204,7 +204,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="Your City"
                                     required
-                                    className="w-full p-3.5 md:p-4 rounded-sm border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
+                                    className="w-full p-2 md:p-4 rounded-xl border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
                                 />
                             </div>
                         </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                                 placeholder="How can we help?"
                                 rows="4"
                                 required
-                                className="w-full p-3.5 md:p-4 rounded-sm border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10 resize-none"
+                                className="w-full p-2 md:p-4 rounded-xl border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10 resize-none"
                             ></textarea>
                         </div>
 
@@ -227,7 +227,7 @@ const Contact = () => {
                         <button 
                             type="submit" 
                             disabled={isSubmitting}
-                            className="w-full mt-2 bg-[#007EA7] hover:bg-[#003459] text-white p-4 rounded-sm font-extrabold text-base uppercase tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#003459]/20 disabled:opacity-70 disabled:cursor-not-allowed"
+                            className="w-full mt-2 bg-[#007EA7] hover:bg-[#003459] text-white p-4 rounded-xl font-extrabold text-base uppercase tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#003459]/20 disabled:opacity-70 disabled:cursor-not-allowed mb-3"
                         >
                             {isSubmitting ? "Sending..." : "Send Message"}
                         </button>
