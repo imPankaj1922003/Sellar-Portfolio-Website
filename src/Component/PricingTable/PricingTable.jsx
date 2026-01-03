@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './PricingTable.css';
 
 const Pricing = () => {
     const [isYearly, setIsYearly] = useState(false);
@@ -35,75 +34,130 @@ const Pricing = () => {
             pro: isYearly ? '2999' : '299'
         },
         catalogue: {
-            basic: isYearly ? '499' : '49',
-            pro: isYearly ? '1499' : '149'
+            basic: isYearly ? '999' : '99',
+            pro: isYearly ? '4999' : '499'
         }
     };
 
     return (
-        <section className="pricing-section" id="pricing">
-            <div className="pricing-container">
-                <div className="pricing-header-main">
-                    <h2 className="section-title">Simple, <span className="blue-text">Transparent</span> Pricing</h2>
-                    
-                    <div className="toggle-wrapper">
-                        <span className={!isYearly ? "active-period" : ""}>Monthly</span>
-                        <label className="switch">
-                            <input type="checkbox" onChange={() => setIsYearly(!isYearly)} />
-                            <span className="slider round"></span>
+        <section className="py-12 md:py-20 px-4 md:px-6 bg-[#f8fafc]" id="pricing">
+            <div className="max-w-5xl mx-auto">
+
+                {/* Header */}
+                <div className="text-center mb-8 md:mb-12">
+                    <h2 className="text-3xl md:text-5xl font-[900] text-[#00171f] mb-4 md:mb-6 leading-tight">
+                        Simple, <span className="text-[#007EA7]">Transparent</span> Pricing
+                    </h2>
+
+                    {/* Toggle Monthly/Yearly */}
+                    <div className="flex items-center justify-center gap-3 md:gap-4 mb-8 font-bold text-slate-500 text-sm md:text-base">
+                        <span className={!isYearly ? "text-[#00171f]" : ""}>4 Weeks</span>
+                        <label className="relative inline-block w-11 h-6 cursor-pointer">
+                            <input
+                                type="checkbox"
+                                className="sr-only peer"
+                                checked={isYearly}
+                                onChange={() => setIsYearly(!isYearly)}
+                            />
+                            <div className="w-full h-full bg-slate-300 rounded-full peer peer-checked:bg-[#007EA7] transition-colors"></div>
+                            <div className="absolute left-1 bottom-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
                         </label>
-                        <span className={isYearly ? "active-period" : ""}>
-                            Yearly <span className="save-badge">Save 22%</span>
+                        <span className={isYearly ? "text-[#00171f]" : ""}>
+                            Yearly <span className="ml-1 md:ml-2 text-[10px] bg-green-100 text-green-600 px-2 py-0.5 rounded-md">Save 23%</span>
                         </span>
                     </div>
 
-                    <div className="service-tabs">
-                        <button className={`tab-btn ${activeService === 'pos' ? 'active' : ''}`} onClick={() => setActiveService('pos')}>
-                            POS Billing
+                    {/* Service Tabs */}
+                    <div className="inline-flex bg-slate-200 p-1 rounded-xl">
+                        <button
+                            className={`px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-bold transition-all ${activeService === 'pos' ? 'bg-white text-[#007EA7] shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                            onClick={() => setActiveService('pos')}
+                        >
+                            POSI - billing
                         </button>
-                        <button className={`tab-btn ${activeService === 'catalogue' ? 'active' : ''}`} onClick={() => setActiveService('catalogue')}>
-                            Digital Catalogue
+                        <button
+                            className={`px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-bold transition-all ${activeService === 'catalogue' ? 'bg-white text-[#007EA7] shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                            onClick={() => setActiveService('catalogue')}
+                        >
+                            CATALOG - digital store
                         </button>
                     </div>
                 </div>
 
-                {/* SCROLLABLE WRAPPER FOR MOBILE */}
-                <div className="pricing-table-scroll-area">
-                    <div className="pricing-table-card">
-                        <div className="table-header-sticky">
-                            <div className="feature-label-cell">FEATURES</div>
+                {/* Pricing Table Card */}
+                <div className="bg-white border border-slate-200 rounded-2xl md:rounded-3xl shadow-xl shadow-slate-200/50 overflow-hidden">
+                    {/* Table Header */}
+                    <div className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2.2fr_1fr_1fr] bg-slate-50 border-b-2 border-slate-200 sticky top-0 z-20">
 
-                            <div className="plan-column-head">
-                                <span className="p-title">{activeService === 'pos' ? 'POS Basic' : 'E-Cat Basic'}</span>
-                                <span className="p-price">₹{pricing[activeService].basic}</span>
-                                <span className="p-cycle">per {isYearly ? 'year' : '4 weeks'}</span>
-                            </div>
-
-                            <div className="plan-column-head highlighted">
-                                <div className="badge-rec">Best Sellar</div>
-                                <span className="p-title">{activeService === 'pos' ? 'POS Pro' : 'E-Cat Pro'}</span>
-                                <span className="p-price">₹{pricing[activeService].pro}</span>
-                                <span className="p-cycle">per {isYearly ? 'year' : '4 weeks'}</span>
-                            </div>
+                        {/* Dynamic Feature Header */}
+                        <div className="p-4 md:p-10 border-r border-slate-200 flex flex-col justify-center">
+                            <span className="text-[9px] md:text-[10px] font-extrabold text-slate-400 tracking-widest uppercase mb-1">
+                                Features
+                            </span>
+                            <h3 className="text-sm md:text-2xl font-[1000] text-[#007EA7] tracking-tight uppercase truncate">
+                                {activeService === 'pos' ? 'POSI' : 'Catalog'}
+                            </h3>
+                            {/* --- ADDED BILLING CYCLE TEXT --- */}
+                            <span className="text-[8px] md:text-[11px] font-bold text-slate-500 uppercase mt-1">
+                                Per {isYearly ? 'Year' : '4 Weeks'}
+                            </span>
                         </div>
 
-                        <div className="table-body">
-                            {currentFeatures.map((f, i) => (
-                                <div className="t-row" key={i}>
-                                    <div className="t-cell-name">{f.name}</div>
-                                    <div className="t-cell-status">
-                                        {f.basic ? <span className="tick">✔</span> : <span className="cross">✖</span>}
-                                    </div>
-                                    <div className="t-cell-status bg-tint">
-                                        {f.pro ? <span className="tick">✔</span> : <span className="cross">✖</span>}
-                                    </div>
+                        {/* Basic Price Section */}
+                        <div className="p-4 md:p-8 mt-2 text-center border-r border-slate-200 flex flex-col justify-center items-center">
+                            <span className="block text-[10px] md:text-sm font-extrabold text-slate-500 uppercase tracking-wider mb-1">
+                                Basic
+                            </span>
+                            <span className="block text-lg md:text-4xl font-[900] text-slate-900 leading-none">
+                                ₹{pricing[activeService].basic}
+                            </span>
+                        </div>
+
+                        {/* Pro Price Section */}
+                        <div className="p-4 md:p-8 text-center relative bg-blue-50/40 flex flex-col justify-center items-center">
+                            {/* Best Seller Badge */}
+                            <div className="absolute top-0 left-0 right-0 bg-[#007EA7] text-white text-[7px] md:text-[10px] font-black py-1 uppercase tracking-tighter md:tracking-widest">
+                                Best Seller
+                            </div>
+                            <span className="block text-[10px] md:text-sm font-extrabold text-slate-500 uppercase tracking-wider mb-1 mt-2 md:mt-0">
+                                Pro
+                            </span>
+                            <span className="block text-lg md:text-4xl font-[900] text-[#007EA7] leading-none">
+                                ₹{pricing[activeService].pro}
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Table Body */}
+                    <div className="max-h-[500px] md:max-h-full overflow-y-auto">
+                        {currentFeatures.map((f, i) => (
+                            <div className="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[2.2fr_1fr_1fr] border-b border-slate-100 last:border-0 hover:bg-slate-50/50 transition-colors" key={i}>
+                                <div className="p-3 md:p-6 text-[10px] md:text-[15px] font-semibold text-slate-700 border-r border-slate-100 flex items-center leading-tight">
+                                    {f.name}
                                 </div>
-                            ))}
-                        </div>
+                                <div className="p-3 md:p-4 flex justify-center items-center border-r border-slate-100">
+                                    {f.basic ?
+                                        <span className="text-green-500 text-base md:text-xl font-bold">✔</span> :
+                                        <span className="text-red-300 text-base md:text-xl">✖</span>
+                                    }
+                                </div>
+                                <div className="p-3 md:p-4 flex justify-center items-center bg-blue-50/10">
+                                    {f.pro ?
+                                        <span className="text-green-500 text-base md:text-xl font-bold">✔</span> :
+                                        <span className="text-red-300 text-base md:text-xl">✖</span>
+                                    }
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                
-                <p className="pricing-note">*All prices exclude GST. Additional hardware costs may apply.</p>
+
+                {/* Footer Note */}
+                <div className="mt-3 mb-3 relative flex justify-center md:justify-start">
+                    <span className="absolute left-1 italic text-slate-900 text-xs md:text-sm font-medium">
+                        All prices exclude GST.
+                    </span>
+                </div>
             </div>
         </section>
     );

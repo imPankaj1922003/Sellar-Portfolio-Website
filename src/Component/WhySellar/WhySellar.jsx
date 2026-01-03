@@ -15,7 +15,7 @@ const WhySellar = () => {
     return (
         <section 
             id="why-sellar" 
-            className="relative py-[50px] px-[10px] md:py-20 md:px-5 bg-[#f1f5f9] font-sans overflow-hidden"
+            className="relative py-12 px-[10px] md:py-20 md:px-5 bg-[#f1f5f9] font-sans overflow-hidden"
             style={{
                 backgroundImage: `
                     radial-gradient(circle at 0% 0%, #e2e8f0 0%, transparent 50%),
@@ -61,17 +61,17 @@ const WhySellar = () => {
                         <tbody>
                             {comparisonData.map((item, index) => (
                                 <tr key={index}>
-                                    <td className="w-[38%] md:w-[30%] p-[18px_10px] md:p-5 bg-slate-50 border-b border-slate-200 text-black font-extrabold text-[0.85rem] md:text-[1.05rem]">
+                                    <td className="w-[38%] md:w-[30%] p-[16px_8px] md:p-3 bg-slate-50 border-b border-slate-200 text-black font-extrabold text-[0.65rem] md:text-[1.05rem]">
                                         {item.feature}
                                     </td>
                                     
                                     {/* --- RED BACKGROUND FOR OTHERS --- */}
-                                    <td className="p-[18px_10px] md:p-5 border-b border-red-100 bg-red-50 text-red-900/80 font-semibold text-[0.85rem] md:text-[1.05rem]">
+                                    <td className="p-[18px_10px] md:p-3 border-b border-red-100 bg-red-50 text-red-900/80 font-semibold text-[0.65rem] md:text-[1.05rem]">
                                         {item.others}
                                     </td>
                                     
                                     {/* --- GREEN BACKGROUND FOR SELLAR --- */}
-                                    <td className="p-[18px_10px] md:p-5 border-b border-emerald-100 bg-emerald-50 text-emerald-950 font-extrabold text-[0.85rem] md:text-[1.05rem]">
+                                    <td className="p-[18px_10px] md:p-3 border-b border-emerald-100 bg-emerald-50 text-emerald-950 font-extrabold text-[0.65rem] md:text-[1.05rem]">
                                         {item.sellar}
                                     </td>
                                 </tr>
