@@ -138,7 +138,7 @@ const Pricing = () => {
                                 <div className="p-3 md:p-4 flex justify-center items-center border-r border-slate-100">
                                     {f.basic ?
                                         <span className="text-green-500 text-base md:text-xl font-bold">✔</span> :
-                                        <span className="text-red-300 text-base md:text-xl">✖</span>
+                                        <span className="text-red-500 text-base md:text-xl">✖</span>
                                     }
                                 </div>
                                 <div className="p-3 md:p-4 flex justify-center items-center bg-blue-50/10">

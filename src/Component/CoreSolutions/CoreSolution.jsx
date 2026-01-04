@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CoreSolution = () => {
+const   CoreSolution = () => {
     // Mobile par kaunsa card open hai uska state
     const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -114,7 +114,7 @@ const CoreSolution = () => {
 
                                     {/* Animated Content (Expandable) */}
                                     <div className={`
-                                        grid transition-all duration-500 ease-in-out
+                                        grid transition-all duration-100 ease-in-out
                                         ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-2' : 'grid-rows-[0fr] opacity-0 md:grid-rows-[1fr] md:opacity-100 md:mt-3'}
                                     `}>
                                         <div className="overflow-hidden">
