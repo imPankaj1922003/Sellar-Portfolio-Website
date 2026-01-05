@@ -32,8 +32,8 @@ const Footer = () => {
                             {[
                                 { icon: <Facebook size={20} fill="#1877F2" stroke="none" />, url: "https://facebook.com" },
                                 { icon: <Twitter size={20} fill="#1DA1F2" stroke="none" />, url: "https://twitter.com" },
-                                { icon: <Instagram size={20} className="text-pink-500" />, url: "https://instagram.com" },
-                                { icon: <Linkedin size={20} fill="#0A66C2" stroke="none" />, url: "https://linkedin.com" }
+                                { icon: <Instagram size={20} className="text-pink-500" />, url: "https://www.instagram.com/sellar.in?igsh=MXhobzJrMzIzbGdlaQ==" },
+                                { icon: <Linkedin size={20} fill="#0A66C2" stroke="none" />, url: "https://www.linkedin.com/company/sellar-in/" }
                             ].map((social, idx) => (
                                 <a
                                     key={idx}

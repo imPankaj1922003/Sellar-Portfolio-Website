@@ -77,7 +77,7 @@ const   CoreSolution = () => {
                                 className={`
                                     group relative cursor-pointer
                                     bg-slate-800/70 backdrop-blur-md 
-                                    border ${isExpanded ? 'border-[#00A8E8]' : 'border-white/5'} rounded-2xl 
+                                    border ${isExpanded ? 'border-[#00A8E8]' : 'border-white/5'} rounded-sm 
                                     p-4 md:p-6 
                                     flex flex-col gap-2 
                                     transition-all duration-500 ease-in-out 

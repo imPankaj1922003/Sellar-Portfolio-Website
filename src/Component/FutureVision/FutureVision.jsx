@@ -11,7 +11,7 @@ const FutureVision = () => {
 
                 {/* Header Section */}
                 <div className="text-center mb-8">
-                    <span className="inline-block bg-sky-500/10 text-sky-400 border border-sky-400/30 px-5 py-2 rounded-full text-[10px] font-black tracking-[3px] uppercase mb-6 shadow-[0_0_20px_rgba(56,189,248,0.1)]">
+                    <span className="inline-block bg-sky-500/10 text-sky-400 border border-sky-400/30 px-5 py-2 rounded-sm text-[10px] font-black tracking-[3px] uppercase mb-6 shadow-[0_0_20px_rgba(56,189,248,0.1)]">
                         UPCOMING TECH
                     </span>
                     <h2 className="text-3xl md:text-7xl font-black text-white leading-tight mb-6">
@@ -26,7 +26,7 @@ const FutureVision = () => {
                 <div className="grid grid-cols-3 gap-2 md:gap-6 mt-4">
 
                     {/* AI-Driven Forecast Card (Design synced with others) */}
-                    <div className="group bg-slate-800/20 backdrop-blur-sm p-3 md:p-8 rounded-xl md:rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-all duration-300 flex flex-col items-center text-center">
+                    <div className="group bg-slate-800/20 backdrop-blur-sm p-3 md:p-8 rounded-sm md:rounded-sm border border-white/5 hover:bg-slate-800/40 transition-all duration-300 flex flex-col items-center text-center">
                         <div className="w-8 h-8 md:w-16 md:h-16 bg-white/5 flex items-center justify-center rounded-lg md:rounded-2xl text-lg md:text-3xl group-hover:bg-sky-500 transition-colors mb-3 shrink-0">
                             🤖
                         </div>
@@ -35,7 +35,7 @@ const FutureVision = () => {
                     </div>
 
                     {/* B2B Marketplace Card */}
-                    <div className="group bg-slate-800/20 backdrop-blur-sm p-3 md:p-8 rounded-xl md:rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-all duration-300 flex flex-col items-center text-center">
+                    <div className="group bg-slate-800/20 backdrop-blur-sm p-3 md:p-8 rounded-sm md:rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-all duration-300 flex flex-col items-center text-center">
                         <div className="w-8 h-8 md:w-16 md:h-16 bg-white/5 flex items-center justify-center rounded-lg md:rounded-2xl text-lg md:text-3xl group-hover:bg-sky-500 transition-colors mb-3 shrink-0">
                             🤝
                         </div>
@@ -44,7 +44,7 @@ const FutureVision = () => {
                     </div>
 
                     {/* Predictive Analytics Card */}
-                    <div className="group bg-slate-800/20 backdrop-blur-sm p-3 md:p-8 rounded-xl md:rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-all duration-300 flex flex-col items-center text-center">
+                    <div className="group bg-slate-800/20 backdrop-blur-sm p-3 md:p-8 rounded-sm md:rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-all duration-300 flex flex-col items-center text-center">
                         <div className="w-8 h-8 md:w-16 md:h-16 bg-white/5 flex items-center justify-center rounded-lg md:rounded-2xl text-lg md:text-3xl group-hover:bg-indigo-500 transition-colors mb-3 shrink-0">
                             📊
                         </div>
