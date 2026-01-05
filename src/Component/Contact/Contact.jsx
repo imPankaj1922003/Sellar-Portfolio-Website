@@ -153,7 +153,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="Your Name"
                                     required
-                                    className="w-full p-2 md:p-4 rounded-xl border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
+                                    className="w-full p-2 md:p-4 rounded-sm border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
                                 />
                             </div>
                             
@@ -167,7 +167,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="+91"
                                     required
-                                    className={`w-full p-2 md:p-4 rounded-xl border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
+                                    className={`w-full p-2 md:p-4 rounded-sm border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
                                     ${errors.phone ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-slate-300 focus:border-[#007EA7] focus:ring-[#007EA7]/10'}`}
                                 />
                                 {/* Error Message */}
@@ -188,7 +188,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="email@example.com"
                                     required
-                                    className={`w-full p-2 md:p-4 rounded-xl border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
+                                    className={`w-full p-2 md:p-4 rounded-sm border-[1.5px] bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:bg-white focus:outline-none focus:ring-4 
                                     ${errors.email ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-slate-300 focus:border-[#007EA7] focus:ring-[#007EA7]/10'}`}
                                 />
                                 {/* Error Message */}
@@ -204,7 +204,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="Your City"
                                     required
-                                    className="w-full p-2 md:p-4 rounded-xl border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
+                                    className="w-full p-2 md:p-4 rounded-sm border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10"
                                 />
                             </div>
                         </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                                 placeholder="How can we help?"
                                 rows="4"
                                 required
-                                className="w-full p-2 md:p-4 rounded-xl border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10 resize-none"
+                                className="w-full p-2 md:p-4 rounded-sm border-[1.5px] border-slate-300 bg-slate-50 text-slate-900 text-[0.95rem] transition-all duration-300 focus:border-[#007EA7] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#007EA7]/10 resize-none"
                             ></textarea>
                         </div>
 
@@ -227,7 +227,7 @@ const Contact = () => {
                         <button 
                             type="submit" 
                             disabled={isSubmitting}
-                            className="w-full mt-2 bg-[#007EA7] hover:bg-[#003459] text-white p-4 rounded-xl font-extrabold text-base uppercase tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#003459]/20 disabled:opacity-70 disabled:cursor-not-allowed mb-3"
+                            className="w-full mt-2 bg-[#007EA7] hover:bg-[#003459] text-white p-4 rounded-sm font-extrabold text-base uppercase tracking-wider transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#003459]/20 disabled:opacity-70 disabled:cursor-not-allowed mb-3"
                         >
                             {isSubmitting ? "Sending..." : "Send Message"}
                         </button>

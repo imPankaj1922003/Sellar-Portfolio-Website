@@ -10,11 +10,15 @@ const WhySellar = () => {
         { feature: "Reporting", others: "Raw data", sellar: "Smart reports" },
         { feature: "Dashboard", others: "Non-existent or confusing", sellar: "Crisp, clear, and informative" },
         { feature: "Storage", others: "Local storage", sellar: "100% cloud-based" },
+        { feature: "User by function", others: "Mostly not available", sellar: "Owner, Manager, Salesman" },
+        { feature: "Data Safety", others: "Wague, Mostly locally Stored", sellar: "100% Safe With firebase Google" },
+        { feature: "Settlement", others: "Manual, if at all", sellar: "100% Automatic" },
+        { feature: "Customers Retargeting", others: "Complex, if at all present", sellar: "AI Automated" },
     ];
 
     return (
-        <section 
-            id="why-sellar" 
+        <section
+            id="why-sellar"
             className="relative py-12 px-[10px] md:py-20 md:px-5 bg-[#f1f5f9] font-sans overflow-hidden"
             style={{
                 backgroundImage: `
@@ -24,17 +28,17 @@ const WhySellar = () => {
             }}
         >
             <div className="max-w-[1100px] mx-auto">
-                
+
                 {/* --- HEADER CONTENT --- */}
                 <div className="text-center mb-12">
                     <span className="inline-block bg-white border-2 border-[#007EA7] text-[#005a78] text-xs font-extrabold tracking-[2px] px-[18px] py-[6px] rounded-full shadow-[0_4px_12px_rgba(0,126,167,0.15)] uppercase">
                         THE COMPARISON
                     </span>
-                    
+
                     <h2 className="text-[1.8rem] md:text-5xl font-black text-black mt-5 leading-[1.1] tracking-[-1.5px]">
                         Why Choose <span className="text-[#007EA7]">Sellar?</span>
                     </h2>
-                    
+
                     <p className="mt-4 text-slate-700 text-lg font-semibold">
                         Stop settling for outdated systems. Switch to the future of retail.
                     </p>
@@ -64,12 +68,12 @@ const WhySellar = () => {
                                     <td className="w-[38%] md:w-[30%] p-[16px_8px] md:p-3 bg-slate-50 border-b border-slate-200 text-black font-extrabold text-[0.65rem] md:text-[1.05rem]">
                                         {item.feature}
                                     </td>
-                                    
+
                                     {/* --- RED BACKGROUND FOR OTHERS --- */}
                                     <td className="p-[18px_10px] md:p-3 border-b border-red-100 bg-red-50 text-red-900/80 font-semibold text-[0.65rem] md:text-[1.05rem]">
                                         {item.others}
                                     </td>
-                                    
+
                                     {/* --- GREEN BACKGROUND FOR SELLAR --- */}
                                     <td className="p-[18px_10px] md:p-3 border-b border-emerald-100 bg-emerald-50 text-emerald-950 font-extrabold text-[0.65rem] md:text-[1.05rem]">
                                         {item.sellar}
