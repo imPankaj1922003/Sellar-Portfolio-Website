@@ -23,9 +23,9 @@ const HeroSection = () => {
 
                     {/* Title */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight mb-6 drop-shadow-lg">
-                        One Platform. <br />
+                        Smart POS.<br />
                         <span className="bg-gradient-to-br from-[#AEE2E6] to-white bg-clip-text text-transparent">
-                            Infinite Growth.
+                            Faster Billing.
                         </span>
                     </h1>
                     
